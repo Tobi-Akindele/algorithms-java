@@ -5,7 +5,7 @@ public class NonRepeatedString {
 	public static void main(String[] args) {
 		System.out.println(nonRepeatedChar("asubsebusapd"));
 		System.out.println(nonRepeatedChar("aabbcc"));
-		System.out.println(nonRepeatedChar("aagcdefccb"));
+		System.out.println(nonRepeatedChar("aaacdefccb"));
 	}
 
 	private static String nonRepeatedChar(String s) {
