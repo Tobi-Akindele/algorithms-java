@@ -43,17 +43,17 @@ public class SingleLinkedList<T> {
 	}
 
 	public void traverseSingleLinkedList() {
-		
-		if(head == null) {
+
+		if (head == null) {
 			System.out.println("LinkedList is empty");
 			return;
 		}
-		
+
 		Node<T> currentNode = head;
 		int idx = 0;
-		while(idx < size) {
+		while (idx < size) {
 			System.out.print(currentNode.getValue());
-			if(idx != size - 1) {
+			if (idx != size - 1) {
 				System.out.print(" -> ");
 			}
 			currentNode = currentNode.getNext();
@@ -61,7 +61,29 @@ public class SingleLinkedList<T> {
 		}
 		System.out.println();
 	}
-	
+
+	public boolean searchSingleLinkedList(T value) {
+
+		if (head == null) {
+			System.out.println("LinkedList is empty");
+			return false;
+		}
+
+		Node<T> currentNode = head;
+		int idx = 0;
+		while (idx < size) {
+			T currentValue = currentNode.getValue();
+			if(currentValue == value) {
+				System.out.println("Found at: " + idx);
+				return true;
+			}
+			currentNode = currentNode.getNext();
+			idx++;
+		}
+		System.out.println("Node not found");
+		return false;
+	}
+
 	public Node<T> getHead() {
 		return head;
 	}
