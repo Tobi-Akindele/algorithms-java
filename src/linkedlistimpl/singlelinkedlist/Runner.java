@@ -4,12 +4,15 @@ public class Runner {
 
 	public static void main(String[] args) {
 		SingleLinkedList<String> sll = new SingleLinkedList<>();
-		sll.createSingleLinkedList("Tobi");
+		sll.createSingleLinkedList("A");
 		
-		sll.insertInLinkedList("Akindele", 0);
-		sll.insertInLinkedList("Zee", 1);
+		sll.insertInLinkedList("B", 1);
+		sll.insertInLinkedList("C", 2);
+		sll.insertInLinkedList("D", 3);
+		sll.insertInLinkedList("E", 4);
+		sll.insertInLinkedList("F", 5);
 		
-		System.out.println(sll);
+		sll.traverseSingleLinkedList();
 	}
 
 }
