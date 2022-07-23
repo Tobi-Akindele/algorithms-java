@@ -42,6 +42,26 @@ public class SingleLinkedList<T> {
 		size++;
 	}
 
+	public void traverseSingleLinkedList() {
+		
+		if(head == null) {
+			System.out.println("LinkedList is empty");
+			return;
+		}
+		
+		Node<T> currentNode = head;
+		int idx = 0;
+		while(idx < size) {
+			System.out.print(currentNode.getValue());
+			if(idx != size - 1) {
+				System.out.print(" -> ");
+			}
+			currentNode = currentNode.getNext();
+			idx++;
+		}
+		System.out.println();
+	}
+	
 	public Node<T> getHead() {
 		return head;
 	}
