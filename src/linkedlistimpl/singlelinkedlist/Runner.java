@@ -12,9 +12,13 @@ public class Runner {
 		sll.insertInLinkedList("E", 4);
 		sll.insertInLinkedList("F", 5);
 		
-//		sll.traverseSingleLinkedList();
+		sll.traverseSingleLinkedList();
 		
-		System.out.println(sll.searchSingleLinkedList("D"));
+		sll.deleteNode(3);
+		
+		sll.traverseSingleLinkedList();
+		
+//		System.out.println(sll.searchSingleLinkedList("D"));
 	}
 
 }

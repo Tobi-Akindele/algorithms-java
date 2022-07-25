@@ -84,6 +84,43 @@ public class SingleLinkedList<T> {
 		return false;
 	}
 
+	public void deleteNode(int location) {
+		if(head == null) {
+			System.out.println("LinkedList is empty");
+			return;
+		}
+		if(location == 0) {
+			head = head.getNext();
+			size--;
+			if(size == 0) {
+				tail = null;
+			}
+		} else if (location >= size) {
+			Node<T> tmpNode = head;
+			int idx = 0;
+			while(idx < size - 1) {
+				tmpNode = tmpNode.getNext();
+			}
+			if(tmpNode == head) {
+				head = tail = null;
+				size--;
+				return;
+			}
+			tmpNode.setNext(null);
+			tail = tmpNode;
+			size--;
+		} else {
+			Node<T> tmpNode = head;
+			int idx = 0;
+			while(idx < location - 1) {
+				tmpNode = tmpNode.getNext();
+				idx++;
+			}
+			tmpNode.setNext(tmpNode.getNext().getNext());
+			size--;
+		}
+	}
+	
 	public Node<T> getHead() {
 		return head;
 	}
