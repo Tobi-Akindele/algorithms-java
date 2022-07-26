@@ -121,6 +121,12 @@ public class SingleLinkedList<T> {
 		}
 	}
 	
+	public void deleteSingleLinkedList() {
+		head = null;
+		tail = null;
+		size = 0;
+	}
+	
 	public Node<T> getHead() {
 		return head;
 	}

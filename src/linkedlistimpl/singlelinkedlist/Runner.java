@@ -14,9 +14,11 @@ public class Runner {
 		
 		sll.traverseSingleLinkedList();
 		
-		sll.deleteNode(3);
+//		sll.deleteNode(3);
+		sll.deleteSingleLinkedList();
 		
 		sll.traverseSingleLinkedList();
+		
 		
 //		System.out.println(sll.searchSingleLinkedList("D"));
 	}
