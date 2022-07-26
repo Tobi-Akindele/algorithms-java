@@ -2,12 +2,12 @@ package stackimpl;
 
 import java.lang.reflect.Array;
 
-public class Stack<T> {
+public class StackWithArray<T> {
 	T[] arr;
 	int topOfStack;
 
 	@SuppressWarnings("unchecked")
-	public Stack(Class<T> clazz, int size) {
+	public StackWithArray(Class<T> clazz, int size) {
 		this.arr = (T[]) Array.newInstance(clazz, size);
 		this.topOfStack = -1;
 
